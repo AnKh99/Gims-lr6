@@ -11,15 +11,20 @@ using std::string;
 using std::vector;
 using namespace cv;
 
+// white-black  uchar
+// color        Vec3B
 #define PIXEL_TYPE uchar
 int main()
 {
     // paths to source images
-    //string path = "1.jpg"; // 398 x 529 x 24bit
-    //string path = "3.png"; // 20 x 20 x 24bit
-    //string path = "4.png"; // 4096 x 4096 x 24bit
-    string path = "2.jpg"; // 1920 x 2606 x 24bit
-	//string path = "3.jpg";
+    //string path = "input.jpg";    // 1920 x 2606 x 24bit  || color with complex layout
+    //string path = "1.jpg";        // 398 x 529 x 24bit    || color with complex layout
+    string path = "2.jpg";          // 1920 x 2606 x 24bit  || white-black with complex layout
+    //string path = "3.jpg";        // 1920 x 2560 x 24bit  || white-black with simple layout
+    //string path = "3.png";        // 20 x 20 x 32bit      || color without text
+    //string path = "4.png";        // 4096 x 4096 x 32bit  || color without text
+    //string path = "5.png";        // 350 x 350 x 8bit     || color with complex layout(too low quality)
+	
 
     Mat src = imread(path, IMREAD_GRAYSCALE);
     if (src.empty()) {
