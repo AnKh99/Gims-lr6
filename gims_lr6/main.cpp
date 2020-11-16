@@ -11,6 +11,8 @@ using std::string;
 using std::vector;
 using namespace cv;
 
+// uchar for black-white
+// Vec3b for color
 #define PIXEL_TYPE uchar
 int main()
 {
